@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTMX</title>
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1 class="text-2xl my-5">Request Example</h1>
+      <button
+        hx-get="/users"
+        hx-target="#users"
+        hx-indicator="#loading"
+        class="py-2 px-3 my-5 border rounded-lg hover:bg-blue-500 hover:text-white"
+      >
+        Fetch Users
+      </button>
+
+      <div id="users">
+        <span class="htmx-indicator" id="loading">
+          <img src="./img/loader.gif" alt="" class="m-auto h-10" />
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
